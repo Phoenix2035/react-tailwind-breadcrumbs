@@ -1,6 +1,23 @@
-import React from "react";
+import React, {useState, ChangeEvent} from "react";
+import {useLocation, useNavigate} from "react-router-dom";
+
 
 const Login = () => {
+    const [passwordVal, setPasswordVal] = useState("")
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const handleLogin = () => {
+        const re = /^123456$/g
+        if (re.test(passwordVal)) {
+            localStorage.setItem("auth", "true")
+            if (location.state?.from) {
+                navigate(location.state.from)
+            }
+        } else {
+            localStorage.removeItem("auth")
+        }
+    }
     return (
         <div className="App w-full h-full flex justify-center items-center relative bg-purple-200">
             <div
@@ -16,11 +33,13 @@ const Login = () => {
                         <input
                             type="password"
                             name="password"
-                            value={""}
+                            value={passwordVal}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => setPasswordVal(e?.target.value)}
                             className="border border-[#111] rounded mt-2 p-2"
                         />
                     </div>
                     <button
+                        onClick={handleLogin}
                         type="button"
                         className="w-full bg-blue-500 hover:bg-blue-700 text-white text-center py-2 px-4 mt-6 rounded-full"
                     >

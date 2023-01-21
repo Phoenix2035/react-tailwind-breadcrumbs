@@ -1,20 +1,24 @@
-import {BrowserRouter, Routes} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 
-import AuthenticatedAppPage from "pages/authenticated/authenticated-app.page";
-import UnauthenticatedAppPage from "pages/unauthenticated/unauthenticated-app.page";
+import ROUTES_CONSTANT from "./routing/routes.const";
+import ContactsPage from "./pages/authenticated/contacts.page";
+import LoginPage from "./pages/unauthenticated/login.page";
+import NotFoundPage from "./pages/not-found.page";
+import PrivateRoutes from "./utils/private-routes";
+
 
 function App() {
 
-    const isAuth = localStorage.getItem("auth")
 
     return (
-       <BrowserRouter>
-            <Routes>
-                {
-                    isAuth === "true" ? <AuthenticatedAppPage/> : <UnauthenticatedAppPage/>
-                }
-            </Routes>
-       </BrowserRouter>
+        <Routes>
+            <Route element={<PrivateRoutes/>}>
+                <Route path={ROUTES_CONSTANT.CONTACTS_ROUTE} element={<ContactsPage/>}/>
+            </Route>
+
+            <Route path={ROUTES_CONSTANT.LOGIN_ROUTE} element={<LoginPage/>}/>
+            <Route path={ROUTES_CONSTANT.NOT_FOUND} element={<NotFoundPage/>}/>
+        </Routes>
     );
 }
 
