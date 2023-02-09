@@ -1,92 +1,98 @@
+@font-face {
+  font-family: Vazir;
+  src: url("./assets/fonts/Vazir.ttf") format("truetype");
+}
+
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body,
 #root {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
+  font-family: Vazir;
+}
+
+body {
+  background-color: #282a36;
 }
 
 .App::before {
-	content: "";
-	position: absolute;
-	top: 25%;
-	right: 10%;
-	width: 350px;
-	height: 350px;
-	background: #f09 linear-gradient(45deg, #3023ae 0%, #f09 100%);
-	border-radius: 32% 67% 52% 65% / 25% 45% 80% 56%;
-	will-change: border-radius, transform, opacity;
-	animation: sliderShape 6s linear infinite;
-	display: block;
-	z-index: 1;
-	-webkit-animation: sliderShape 6s linear infinite;
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  width: 350px;
+  height: 350px;
+  background: #f09 linear-gradient(45deg, #3023ae 0%, #f09 100%);
+  border-radius: 32% 67% 52% 65% / 25% 45% 80% 56%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 6s linear infinite;
+  display: block;
+  z-index: 1;
+  -webkit-animation: sliderShape 6s linear infinite;
 }
 
 .App::after {
-	content: "";
-	position: absolute;
-	top: 10%;
-	left: 20%;
-	width: 350px;
-	height: 350px;
-	background: #f09  linear-gradient(45deg, #3023ae 0%, #f09 100%);
-	border-radius: 62% 37% 82% 35% / 45% 45% 80% 66%;
-	will-change: border-radius, transform, opacity;
-	animation: sliderShape 4s linear infinite alternate;
-	-webkit-animation: sliderShape 4s linear infinite alternate;
-	display: block;
-	z-index: 1;
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 350px;
+  height: 350px;
+  background: #f09 linear-gradient(45deg, #3023ae 0%, #f09 100%);
+  border-radius: 62% 37% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 4s linear infinite alternate;
+  -webkit-animation: sliderShape 4s linear infinite alternate;
+  display: block;
+  z-index: 1;
 }
 
 @keyframes sliderShape {
-	0%,
-	100% {
-		border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-		transform: translate3d(0, 0, 0) rotateZ(0.01deg);
-	}
-	34% {
-		border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-		transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
-	}
-	50% {
-		transform: translate3d(0, 0, 0) rotateZ(0.01deg);
-	}
-	67% {
-		border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-		transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
-	}
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
 }
 
 @media (max-width: 768px) {
-	.App::after {
-		display: none;
-	}
+  .App::after {
+    display: none;
+  }
 }
 
-
 @keyframes animate {
-	0% {
-		background-position: -500%;
-	}
-	100% {
-		background-position: 500%;
-	}
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 .four_zero_four_bg {
-	height: 400px;
-	background-image: url(assets/notFound.gif);
-	background-position: center;
-	background-repeat: no-repeat;
+  height: 400px;
+  background-image: url(assets/images/notFound.gif);
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-
-
 
 @tailwind base;
 @tailwind components;

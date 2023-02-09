@@ -4,8 +4,8 @@ import ROUTES_CONSTANT from "./routing/routes.const";
 import ContactsPage from "pages/authenticated/contacts.page";
 import LoginPage from "pages/unauthenticated/login.page";
 import NotFoundPage from "pages/not-found.page";
-import PrivateRoutes from "utils/private-routes";
-import OnboardingRoutesGuard from "utils/onboarding-routes-guard";
+import PrivateRoutes from "routes/private-routes";
+import OnboardingRoutesGuard from "routes/onboarding-routes-guard";
 
 function App() {
   return (

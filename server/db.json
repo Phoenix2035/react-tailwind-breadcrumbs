@@ -1,0 +1,25 @@
+{
+  "contacts": [],
+  "groups": [
+    {
+      "id": "1",
+      "relation": "همکار"
+    },
+    {
+      "id": "2",
+      "relation": "دوست"
+    },
+    {
+      "id": "3",
+      "relation": "فامیل"
+    },
+    {
+      "id": "4",
+      "relation": "سرویس"
+    },
+    {
+      "id": "5",
+      "relation": "آشنا"
+    }
+  ]
+}

@@ -21,7 +21,7 @@ const Login = () => {
             لاگین
           </p>
           <div className="flex flex-col mt-2">
-            <label className="flex justify-end font-bold text-[1em] select-none">
+            <label className="flex justify-start font-bold text-[1em] select-none">
               پسورد
             </label>
             <input
@@ -31,13 +31,16 @@ const Login = () => {
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setPasswordVal(e?.target.value)
               }
-              className="border border-[#111] rounded mt-2 p-2"
+              className="border border-[#111] rounded text-left mt-2 p-2"
             />
           </div>
+              <p className="text-left select-none mt-2">
+                Password: 123456
+              </p>
           <button
             onClick={handleLogin}
             type="button"
-            className="w-full bg-blue-500 hover:bg-blue-700 text-white text-center py-2 px-4 mt-6 rounded-full"
+            className="w-full bg-blue-500 hover:bg-blue-700 text-white text-center py-2 px-4 mt-4 rounded-full"
           >
             ورود
           </button>
