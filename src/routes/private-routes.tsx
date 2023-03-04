@@ -1,5 +1,5 @@
 import { Outlet, Navigate } from "react-router-dom";
-import ROUTES_CONSTANT from "routing/routes.const";
+import ROUTES_CONSTANT from "constants/routes.const";
 
 const PrivateRoutes = () => {
   const isAuth = localStorage.getItem("auth");

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import ROUTES_CONSTANT from "./routing/routes.const";
+import ROUTES_CONSTANT from "./constants/routes.const";
 import ContactsPage from "pages/authenticated/contacts.page";
 import LoginPage from "pages/unauthenticated/login.page";
 import NotFoundPage from "pages/not-found.page";

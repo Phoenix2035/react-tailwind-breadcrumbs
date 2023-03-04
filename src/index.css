@@ -92,6 +92,7 @@ body {
   background-image: url(assets/images/notFound.gif);
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 @tailwind base;

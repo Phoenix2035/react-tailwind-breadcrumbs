@@ -1,25 +1,24 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import ROUTES_CONSTANT from "../routing/routes.const";
+import React from "react";
+import { Link } from "react-router-dom";
+import ROUTES_CONSTANT from "../constants/routes.const";
 
 const NotFoundPage = () => {
-    return (
-        <section className="">
-                        <div>
-                            <div className="four_zero_four_bg">
-                                <h1>404</h1>
-                            </div>
+  return (
+    <section className="w-full h-full flex justify-center items-center">
+      <div className="w-1/3 text-center">
+        <div className="four_zero_four_bg" />
 
-                            <div className="content_box_404">
-                                <h3>
-                                    بنظر میرسه گم شدی!
-                                </h3>
-                                <p>این صفحه در دسترس نیست</p>
-                                <Link to={ROUTES_CONSTANT.CONTACTS_ROUTE} className="link_404">برگرد به خانه</Link>
-                            </div>
-                        </div>
-        </section>
-    );
+        <div className="flex flex-col items-center text-[#f8f8f2] mt-2">
+          <h3 className="text-[30px]">بنظر میرسه گم شدی!</h3>
+          <p className="text-[20px]">این صفحه در دسترس نیست</p>
+
+          <div className="w-1/3 mt-5 py-2.5 px-5 rounded transition-all	bg-[#ff5555] hover:bg-[#6272a4]">
+            <Link to={ROUTES_CONSTANT.CONTACTS_ROUTE}>برگرد به خانه</Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default NotFoundPage;

@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-import ROUTES_CONSTANT from "../routing/routes.const";
+import ROUTES_CONSTANT from "../constants/routes.const";
 
 const OnboardingRoutesGuard = () => {
   const isAuth = localStorage.getItem("auth");
