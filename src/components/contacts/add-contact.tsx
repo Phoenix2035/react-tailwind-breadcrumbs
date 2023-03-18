@@ -19,9 +19,9 @@ const AddContact = () => {
   return (
     <>
       <Navbar withoutSearch />
-      <h2 className="w-[80%] text-center text-[#50fa7b] mx-auto p-3 border-b-[0.5px] border-[#50fa7b] border-opacity-20 mb-4">
+      <h1 className="w-[80%] text-[22px] text-center text-[#50fa7b] mx-auto p-3 border-b-[0.5px] border-[#50fa7b] border-opacity-20 mb-4">
         ساخت مخاطب جدید
-      </h2>
+      </h1>
 
       <div className="flex ">
         <form className="w-1/2 flex flex-col justify-center items-center ">

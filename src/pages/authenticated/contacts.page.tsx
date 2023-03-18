@@ -19,12 +19,10 @@ const ContactPage = () => {
         <MdAddCircle />
       </Link>
 
-      <ContactNotExist />
-      {/* <div className="grid grid-cols-[repeat(auto-fit,minmax(700px,1fr))]">
-                <ContactCard />
-                <ContactCard />
-                <ContactCard />
-            </div> */}
+      {/* <ContactNotExist /> */}
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(700px,1fr))]">
+        <ContactCard />
+      </div>
     </div>
   );
 };
