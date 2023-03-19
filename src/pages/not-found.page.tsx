@@ -13,7 +13,7 @@ const NotFoundPage = () => {
           <p className="text-[20px]">این صفحه در دسترس نیست</p>
 
           <div className="w-1/3 mt-5 py-2.5 px-5 rounded transition-all	bg-[#ff5555] hover:bg-[#6272a4]">
-            <Link to={ROUTES_CONSTANT.CONTACTS_ROUTE}>برگرد به خانه</Link>
+            <Link to={ROUTES_CONSTANT.CONTACTS_ROUTE}>برگرد به صفحه اصلی</Link>
           </div>
         </div>
       </div>

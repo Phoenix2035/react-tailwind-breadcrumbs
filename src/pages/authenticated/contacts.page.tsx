@@ -21,7 +21,7 @@ const ContactPage = () => {
 
       {/* <ContactNotExist /> */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(700px,1fr))]">
-        <ContactCard />
+        <ContactCard contactInfo />
       </div>
     </div>
   );

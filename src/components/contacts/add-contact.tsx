@@ -4,6 +4,7 @@ import Navbar from "components/navbar/navbar";
 import AddContactImg from "assets/images/man-taking-note.png";
 import TextInput from "components/ui/text-input";
 import ROUTES_CONSTANT from "constants/routes.const";
+import PageTitle from "components/ui/page-title";
 
 const AddContact = () => {
   const inputPlaceholderText = [
@@ -19,9 +20,12 @@ const AddContact = () => {
   return (
     <>
       <Navbar withoutSearch />
-      <h1 className="w-[80%] text-[22px] text-center text-[#50fa7b] mx-auto p-3 border-b-[0.5px] border-[#50fa7b] border-opacity-20 mb-4">
-        ساخت مخاطب جدید
-      </h1>
+
+      <PageTitle
+        title="ساخت مخاطب جدید"
+        textColor="#50fa7b"
+        borderColor="#50fa7b"
+      />
 
       <div className="flex ">
         <form className="w-1/2 flex flex-col justify-center items-center ">
