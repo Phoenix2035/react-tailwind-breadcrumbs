@@ -15,6 +15,12 @@ const AddContact = () => {
     "شغل",
   ];
 
+  const selectGroupsText = [
+    { label: "همکار", value: "colleague" },
+    { label: "دوست", value: "friend" },
+    { label: "فامیل", value: "family" },
+  ];
+
   const navigate = useNavigate();
 
   return (
@@ -33,6 +39,17 @@ const AddContact = () => {
             {inputPlaceholderText.map((item: string, index: number) => (
               <TextInput placeholder={item} key={index} />
             ))}
+
+            <select className="w-96 rounded py-1 px-2 outline-none border border-[#bd93f9] mb-5">
+              <option selected disabled>
+                انتخاب گروه
+              </option>
+              {selectGroupsText.map((item) => (
+                <option value={item.value} key={item.value}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
 
             <div>
               <button className="bg-[#bd93f9] rounded ml-4 px-2 py-1 text-white transition-all hover:bg-opacity-80">

@@ -11,7 +11,8 @@ const PageTitle: React.FC<PageTitleProps> = ({
 }) => {
   return (
     <h1
-      className={`w-[80%] text-[22px] text-center text-[${textColor}] mx-auto p-3 border-b-[0.5px] border-[${borderColor}] border-opacity-20 mb-4`}
+      className={`w-[80%] text-[22px] text-center mx-auto p-3 border-b-[0.5px] border-opacity-20 mb-4 select-none`}
+      style={{ color: textColor, borderColor }}
     >
       {title}
     </h1>

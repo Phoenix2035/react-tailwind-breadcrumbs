@@ -58,7 +58,7 @@ const ContactCard = ({ contactInfo, contactButtons }: ContactCardProps) => {
                 </div>
 
                 <Link
-                  to={`/contacts/edit`}
+                  to={ROUTES_CONSTANT.EDIT_CONTACT}
                   className="bg-[#ff5555] rounded p-2"
                 >
                   <MdEdit />
