@@ -1,13 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FaAddressBook, FaSearch } from "react-icons/fa";
+import ROUTES_CONSTANT from "constants/routes.const";
 
 interface NavbarProps {
   withoutSearch?: boolean;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ withoutSearch }) => {
+  const navigate = useNavigate();
+
   return (
-    <nav className="w-full h-12 bg-[#44475a] flex justify-around">
+    <nav className="w-full h-12 bg-[#44475a] flex justify-around items-center">
       <div className="flex justify-center items-center">
         <FaAddressBook size={18} color="#bd93f9" />
         <p className="text-white px-1">وب اپلیکیشن مدیریت</p>
@@ -21,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({ withoutSearch }) => {
             type="text"
             placeholder="جستجوی مخاطب"
           />
-          <span className="">
+          <span className="text-white">
             <FaSearch
               size={33.5}
               style={{
@@ -34,6 +38,16 @@ const Navbar: React.FC<NavbarProps> = ({ withoutSearch }) => {
           </span>
         </div>
       ) : null}
+
+      <button
+        className="text-white bg-[#bd93f9] px-2 py-1 rounded transition-all hover:opacity-80"
+        onClick={() => {
+          navigate(ROUTES_CONSTANT.LOGIN_ROUTE);
+          localStorage.setItem("auth", "false");
+        }}
+      >
+        خروج
+      </button>
     </nav>
   );
 };

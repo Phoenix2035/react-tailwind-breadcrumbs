@@ -13,7 +13,7 @@ const ContactPage = () => {
 
       <Link
         to={ROUTES_CONSTANT.ADD_CONTACT}
-        className="w-56 flex justify-center items-center p-2 mr-[130px] mt-8 bg-[#ff79c6] rounded"
+        className="w-56 flex justify-center items-center p-2 mr-[130px] mt-8 bg-[#ff79c6] rounded transition-all	hover:opacity-80"
       >
         <p className="pl-2">ساخت مخاطب جدید</p>
         <MdAddCircle />
